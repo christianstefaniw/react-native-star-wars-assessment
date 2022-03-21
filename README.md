@@ -7,3 +7,6 @@
 
 ## Next steps
 1. Input validation
+
+## Dependency explanations
+See here: https://github.com/christianstefaniw/react_native_star_wars_assessment/blob/master/deps.md

@@ -27,12 +27,12 @@ const styles = StyleSheet.create({
         marginVertical: 10,
     },
 
-    login: {
+    loginButton: {
         backgroundColor: AppColors.PRIMARY,
         width: '75%'
     },
 
-    loginAsGuest: {
+    loginAsGuestButton: {
         backgroundColor: AppColors.SECONDARY,
         width: '50%',
     },

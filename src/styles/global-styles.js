@@ -7,6 +7,10 @@ const globalStyles = StyleSheet.create({
     },
     textCenter: {
         textAlign: 'center'
+    },
+    errorText: {
+        color: 'red',
+        textAlign: 'center',
     }
 });
 

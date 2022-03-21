@@ -5,7 +5,8 @@ import { Actions } from 'react-native-router-flux';
 const LoadAccount = WrappedComponent => {
     return class extends React.Component {
         async componentDidMount() {
-            if (!AsyncStorage.getItem('email'))
+            console.log(await AsyncStorage.getItem('email'));
+            if ((await AsyncStorage.getItem('email')) === null)
                 return;
             Actions.pilots();
         }

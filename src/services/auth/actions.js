@@ -38,8 +38,8 @@ export function login(email) {
 
 export function loginAsGuest() {
     return (dispatch) => {
-        dispatch(setEmail(''));
-        dispatch(setUUID(''));
+        dispatch(setEmail(null));
+        dispatch(setUUID(null));
         Actions.pilots();
     }
 }

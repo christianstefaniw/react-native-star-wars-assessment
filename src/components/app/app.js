@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Router, Scene } from 'react-native-router-flux'
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import store from '../../redux/store';
 

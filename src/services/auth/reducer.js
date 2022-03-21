@@ -1,4 +1,4 @@
-import { SET_LOGIN_ERROR, SET_EMAIL } from "./types";
+import { SET_LOGIN_ERROR, SET_EMAIL, SET_UUID } from "./types";
 
 export default function authReducer(state = [], action) {
     switch (action.type) {
@@ -11,6 +11,11 @@ export default function authReducer(state = [], action) {
             return {
                 ...state,
                 loginError: action.value,
+            }
+        case SET_UUID:
+            return {
+                ...state,
+                uuid: action.value,
             }
         default:
             return state;

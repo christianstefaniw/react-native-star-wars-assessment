@@ -17,11 +17,13 @@ class Login extends React.Component {
     }
 
     login = () => {
+        if (!this.state.email || !this.state.password)
+            return;
         this.props.login(this.state.email);
     }
 
     loginAsGuest = () => {
-
+        this.props.loginAsGuest();
     }
 
     handleTextChange = (name, value) => {
@@ -58,7 +60,7 @@ class Login extends React.Component {
 
                 <Text style={globalStyles.textCenter}>or</Text>
 
-                <TouchableOpacity onPress={this.props.loginAsGuest} style={[styles.button, styles.loginAsGuestButton]}>
+                <TouchableOpacity onPress={this.loginAsGuest} style={[styles.button, styles.loginAsGuestButton]}>
                     <Text style={styles.loginButtonText}>Login as Guest</Text>
                 </TouchableOpacity>
 

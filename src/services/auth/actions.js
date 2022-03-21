@@ -18,7 +18,7 @@ export function setUUID(uuid) {
 }
 
 export function login(email) {
-    return async dispatch => {
+    return async (dispatch) => {
         const saved = await AsyncStorage.setItem('email', email)
             .then(() => {
                 dispatch(setEmail(email));
@@ -37,7 +37,7 @@ export function login(email) {
 }
 
 export function loginAsGuest() {
-    return dispatch => {
+    return (dispatch) => {
         dispatch(setEmail(''));
         dispatch(setUUID(''));
         Actions.pilots();

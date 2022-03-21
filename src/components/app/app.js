@@ -6,8 +6,9 @@ import store from '../../redux/store';
 
 import Login from '../../screens/auth/login/login';
 import Pilots from '../../screens/pilots/pilots';
+import LoadAccount from '../../hoc/load-account';
 
-export default function App() {
+function App() {
     return (
         <Provider store={store}>
             <Router>
@@ -19,3 +20,5 @@ export default function App() {
         </Provider>
     )
 }
+
+export default LoadAccount(App);
